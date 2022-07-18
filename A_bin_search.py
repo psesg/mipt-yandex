@@ -4,7 +4,7 @@ import math
 
 logging.basicConfig(stream=sys.stderr, level=logging.CRITICAL)  # DEBUG, CRITICAL
 
-with open('input.txt', 'r') as f:
+with open('input_a1.txt', 'r') as f:
     lines = f.readlines()
 f.close()
 n = 0
