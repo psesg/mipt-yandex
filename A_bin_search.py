@@ -1,7 +1,8 @@
 import logging
 import sys
+import math
 
-logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)  # DEBUG, CRITICAL
+logging.basicConfig(stream=sys.stderr, level=logging.CRITICAL)  # DEBUG, CRITICAL
 
 with open('input.txt', 'r') as f:
     lines = f.readlines()
@@ -24,3 +25,33 @@ for k in range(len(lines)):
         estr = workstr.strip("\n")
         e = int(estr)
         logging.info("e = {}".format(e))
+L = 0
+R = n - 1
+sig = ''
+while L <= R:
+    m = math.floor((L+R) / 2)
+    if a_list[m] < e:
+        L = m + 1
+        # print('>', m)
+        sig = '+'
+    elif a_list[m] > e:
+        R = m - 1
+        # print('<', m)
+        sig = '-'
+    else:
+        print(m)
+        exit(0)
+
+if e < a_list[0]:
+    print(0)
+    exit(0)
+elif e > a_list[n - 1]:
+    print(n)
+    exit(0)
+else:
+    if sig == '+':
+        print(m+1)
+    else:
+        print(m)
+
+
