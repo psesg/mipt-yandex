@@ -43,7 +43,7 @@ def merge_sort(nums):
     # Объединить отсортированные списки в новый
     return merge(left_list, right_list)
 
-with open('input.txt', 'r') as f:
+with open('input_c1.txt', 'r') as f:
     lines = f.readlines()
 f.close()
 n = 0

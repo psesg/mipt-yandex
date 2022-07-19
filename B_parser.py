@@ -4,7 +4,7 @@ from collections import deque
 
 logging.basicConfig(stream=sys.stderr, level=logging.CRITICAL)  # DEBUG, CRITICAL
 
-with open('input.txt', 'r') as f:
+with open('input_b1.txt', 'r') as f:
     lines = f.readlines()
 strS =''
 for k in range(len(lines)):
